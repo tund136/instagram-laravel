@@ -10,8 +10,7 @@ class ProfilesController extends Controller {
     public function index($user_id) {
         $users = User::all();
         $user = $users->find($user_id);
-        dd($user);
 
-        //return view('home');
+        return view('home', ['user' => $user,]);
     }
 }
